@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('tag_id');
             $table->foreign('content_id')->references('id')->on('contents');
             $table->foreign('tag_id')->references('id')->on('tags');
-            $table->unique(['content-id', 'tag_id']);
+            $table->unique(['content_id', 'tag_id']);
         });
     }
 
